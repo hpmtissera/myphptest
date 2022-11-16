@@ -10,7 +10,7 @@
  echo '<p>Hello World</p>'; 
 
     $conn = mysqli_init();
-    mysqli_ssl_set($conn, NULL,NULL, "/Users/prasad/Downloads/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+    mysqli_ssl_set($conn, NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
     mysqli_real_connect($conn, "prasadmysql1.mysql.database.azure.com", "prasad", "Abcde@123456", "testdb", 3306, MYSQLI_CLIENT_SSL);
  
     if ($conn->connect_error) {
