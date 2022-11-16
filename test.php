@@ -14,9 +14,11 @@
     mysqli_real_connect($conn, "prasadmysql1.mysql.database.azure.com", "prasad", "Abcde@123456", "testdb", 3306, MYSQLI_CLIENT_SSL);
  
     if ($conn->connect_error) {
+        echo '<p>connection error<p>';
         die("Connection failed: " . $conn->connect_error);
       }
 
+   echo '<p>connection ok<p>';
       $sql = "SELECT id, name FROM names";
 $result = $conn->query($sql);
 
